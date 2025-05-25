@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './default-login-layout.component.scss'
 })
 export class DefaultLoginLayoutComponent {
-  @Input() title: string = ""
+  @Input() screenTitle: string = ""
   @Input() loginButtonText: string = ""
   @Input() forgotPasswordText: string = ""
   @Input() registerButtonText: string = ""

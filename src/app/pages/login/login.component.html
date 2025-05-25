@@ -1,11 +1,22 @@
 <app-default-login-layout 
-    title="Gestão rápida e fácil da sua barbearia."
+    screenTitle="Gestão rápida e fácil da sua barbearia."
     loginButtonText="Fazer login"
     forgotPasswordText="Esqueceu sua senha?"
     registerButtonText="Crie sua conta!"
     notClientYetText="Ainda não é cliente?"
 >
     <form [formGroup]="loginForm">
-        
+        <app-login-input 
+            formName="email"
+            label="Email" 
+            type="email" 
+            placeholder="exemplo@email.com">
+        </app-login-input>
+        <app-login-input 
+            formName="password"
+            label="Senha" 
+            type="password" 
+            placeholder="*********">
+        </app-login-input>
     </form>
 </app-default-login-layout>

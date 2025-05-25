@@ -32,6 +32,7 @@ main {
         }
 
         .login-form {
+            width: 90%;
             text-align: start;
             margin-bottom: 20px;
         }
@@ -40,10 +41,20 @@ main {
             width: 60%;
             display: flex;
             flex-direction: column;
+            white-space: nowrap;   
+            gap: 16px;
+        }
+
+        .register-button-area {
+            margin-top: 16px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            white-space: nowrap;    
             gap: 8px;
         }
+
 
         h2 {
             font-size: 20px;
@@ -69,6 +80,11 @@ main {
         border: none;
         padding: 12px 24px;
         background: transparent;
+        align-items: center;
+        justify-content: center;
+        display: inline-flex;
+        white-space: nowrap;       
+        min-width: fit-content;   
         cursor: pointer;
 
         &.login-button {
@@ -80,5 +96,11 @@ main {
             border: 3px solid $primary-color;
             color: $text-color;
         }
+    }
+    a {
+        color: $text-color;
+        text-decoration: none;
+        display: inline-block;
+        width: auto;
     }
 }
