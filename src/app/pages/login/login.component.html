@@ -5,6 +5,7 @@
     registerButtonText="Crie sua conta!"
     notClientYetText="Ainda não é cliente?"
     (submit)="submit()"
+    (navigate)="navigate()"
 >
     <form [formGroup]="loginForm">
         <app-login-input 

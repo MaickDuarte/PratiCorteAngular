@@ -13,8 +13,13 @@ export class DefaultLoginLayoutComponent {
   @Input() registerButtonText: string = ""
   @Input() notClientYetText: string = ""
   @Output("submit") onSubmit = new EventEmitter<void>()
+  @Output("navigate") onNavigate = new EventEmitter<void>()
 
   submit() {
     this.onSubmit.emit()
+  }
+
+  navigate() {
+    this.onNavigate.emit()
   }
 }
