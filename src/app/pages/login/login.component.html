@@ -7,13 +7,15 @@
 >
     <form [formGroup]="loginForm">
         <app-login-input 
-            formName="email"
+            formControlName="email"
+            inputName="email"
             label="Email" 
             type="email" 
             placeholder="exemplo@email.com">
         </app-login-input>
-        <app-login-input 
-            formName="password"
+        <app-login-input
+            formControlName="password"
+            inputName="password"
             label="Senha" 
             type="password" 
             placeholder="*********">
