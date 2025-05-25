@@ -87,6 +87,15 @@ main {
         min-width: fit-content;   
         cursor: pointer;
 
+        &:hover {
+            opacity: 0.9;
+        }
+
+        &:active {
+            filter: brightness(0.85);
+            transform: scale(0.98);
+        }
+
         &.login-button {
             background-color: $primary-color;
             color: $text-color;
