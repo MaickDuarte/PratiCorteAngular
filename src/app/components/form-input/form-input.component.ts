@@ -4,19 +4,19 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 type InputType = 'text' | 'email' | 'password';
 
 @Component({
-  selector: 'app-login-input',
-  templateUrl: './login-input.component.html',
-  styleUrl: './login-input.component.scss',
+  selector: 'app-form-input',
+  templateUrl: './form-input.component.html',
+  styleUrl: './form-input.component.scss',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => LoginInputComponent),
+      useExisting: forwardRef(() => FormInputComponent),
       multi: true,
     }
   ],
   standalone: true
 })
-export class LoginInputComponent implements ControlValueAccessor {
+export class FormInputComponent implements ControlValueAccessor {
   @Input() type: InputType = 'text'
   @Input() label: string = ''
   @Input() placeholder: string = ''

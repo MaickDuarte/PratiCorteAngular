@@ -8,19 +8,19 @@
     (navigate)="navigate()"
 >
     <form [formGroup]="loginForm">
-        <app-login-input 
+        <app-form-input 
             formControlName="email"
             inputName="email"
             label="Email" 
             type="email" 
             placeholder="exemplo@email.com">
-        </app-login-input>
-        <app-login-input
+        </app-form-input>
+        <app-form-input
             formControlName="password"
             inputName="password"
             label="Senha" 
             type="password" 
             placeholder="*********">
-        </app-login-input>
+        </app-form-input>
     </form>
 </app-default-login-layout>

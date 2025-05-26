@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DefaultLoginLayoutComponent } from '../../components/default-login-layout/default-login-layout.component';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
-import { LoginInputComponent } from '../../components/login-input/login-input.component';
+import { FormInputComponent } from '../../components/form-input/form-input.component';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { ToastrService } from 'ngx-toastr';
@@ -12,7 +12,7 @@ import { isEmail, isPassword } from '../../shared/utils';
   imports: [
     DefaultLoginLayoutComponent,
     ReactiveFormsModule,
-    LoginInputComponent,
+    FormInputComponent,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
