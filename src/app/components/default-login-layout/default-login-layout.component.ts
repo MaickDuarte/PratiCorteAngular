@@ -8,10 +8,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class DefaultLoginLayoutComponent {
   @Input() screenTitle: string = ""
-  @Input() loginButtonText: string = ""
-  @Input() forgotPasswordText: string = ""
-  @Input() registerButtonText: string = ""
-  @Input() notClientYetText: string = ""
+  @Input() primaryButtonText: string = ""
+  @Input() primarySpanText: string = ""
+  @Input() secondaryButtonText: string = ""
+  @Input() secondaryText: string = ""
   @Output("submit") onSubmit = new EventEmitter<void>()
   @Output("navigate") onNavigate = new EventEmitter<void>()
 

@@ -16,7 +16,7 @@ main {
         height: 100%;
     }
 
-    .login-section {
+    .first-section {
         flex-grow: 0.3;
         padding: 0 35px;
         text-align: center;
@@ -24,20 +24,19 @@ main {
 
         .logo-section {
             margin-bottom: 20px;
-
         }
 
         .logo {
             width: 150px;
         }
 
-        .login-form {
+        .primary-form {
             width: 90%;
             text-align: start;
             margin-bottom: 20px;
         }
 
-        .login-button-area {
+        .primary-area {
             width: 60%;
             display: flex;
             flex-direction: column;
@@ -45,7 +44,7 @@ main {
             gap: 16px;
         }
 
-        .register-button-area {
+        .secondary-area {
             margin-top: 16px;
             width: 50%;
             display: flex;
@@ -96,12 +95,12 @@ main {
             transform: scale(0.98);
         }
 
-        &.login-button {
+        &.primary-button {
             background-color: $primary-color;
             color: $text-color;
         }
 
-        &.register-button {
+        &.secondary-button {
             border: 3px solid $primary-color;
             color: $text-color;
         }

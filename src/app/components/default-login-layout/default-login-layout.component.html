@@ -1,20 +1,20 @@
 <main>
-    <section class="login-section">
+    <section class="first-section">
         <div class="logo-section">
             <img src="/png/PratiCorte-Logo-white.png" class="logo">
             <h2>{{ screenTitle }}</h2>
         </div>
-        <div class="login-form">
+        <div class="primary-form">
             <ng-content></ng-content>
         </div>
-        <div class="login-button-area">
-            <span><a href="#">{{ forgotPasswordText }}</a></span>
-            <button class="login-button" (click)="submit()">{{ loginButtonText }}</button>
+        <div class="primary-area">
+            <span><a href="#">{{ primarySpanText }}</a></span>
+            <button class="primary-button" (click)="submit()">{{ primaryButtonText }}</button>
         </div>
 
-        <div class="register-button-area">
-            <h3>{{ notClientYetText }}</h3>
-            <button class="register-button" (click)="navigate()">{{ registerButtonText }}</button>
+        <div class="secondary-area">
+            <h3>{{ secondaryText }}</h3>
+            <button class="secondary-button" (click)="navigate()">{{ secondaryButtonText }}</button>
         </div>
     </section>
     <section class="view-section">
