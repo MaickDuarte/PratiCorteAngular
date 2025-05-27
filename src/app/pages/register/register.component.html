@@ -1,7 +1,10 @@
 <app-default-login-layout
     screenTitle="Gestão rápida e fácil da sua barbearia."
     primaryButtonText="Criar conta"
+    primarySpanText="termo de uso e política de privacidade."
     secondaryButtonText="Voltar para login"
+    (submit)="submit()"
+    (navigate)="navigate()"
 >
     <form [formGroup]="registerForm">
         <app-form-input 
@@ -10,20 +13,6 @@
             label="Nome"
             type="text"
             placeholder="Fulano">
-        </app-form-input>
-        <app-form-input 
-            formControlName="establishmentName"
-            inputName="establishmentName"
-            label="Nome do estabelecimento"
-            type="text"
-            placeholder="Barbearia">
-        </app-form-input>
-        <app-form-input 
-            formControlName="cellphone"
-            inputName="cellphone"
-            label="Celular"
-            type="text"
-            placeholder="(11)99999-9999">
         </app-form-input>
         <app-form-input 
             formControlName="email"
@@ -39,12 +28,26 @@
             type="password"
             placeholder="*********">
         </app-form-input>
-        <app-form-input
-            formControlName="confirmPassword"
-            inputName="password"
-            label="Confirme a senha"
-            type="password"
-            placeholder="*********">
+        <app-form-input 
+            formControlName="establishmentName"
+            inputName="establishmentName"
+            label="Nome do estabelecimento"
+            type="text"
+            placeholder="Barbearia">
+        </app-form-input>
+        <app-form-input 
+            formControlName="cellphone"
+            inputName="cellphone"
+            label="Celular"
+            type="text"
+            placeholder="(11)99999-9999">
+        </app-form-input>
+            <app-form-input 
+            formControlName="document"
+            inputName="document"
+            label="Documento"
+            type="text"
+            placeholder="CPF ou CNPJ">
         </app-form-input>
     </form>
 

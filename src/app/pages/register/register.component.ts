@@ -5,6 +5,7 @@ import { FormInputComponent } from '../../components/form-input/form-input.compo
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { RegisterService } from '../../services/register.service';
+import { isEmpty } from '../../shared/utils';
 
 @Component({
   selector: 'app-register',
@@ -33,5 +34,35 @@ export class RegisterComponent {
       cellphone: new FormControl('', [Validators.required]),
       establishmentName: new FormControl('', [Validators.required]),
     });
+  }
+
+  validateForm() {
+    if (isEmpty(this.registerForm.value.name) || 
+      isEmpty(this.registerForm.value.email) || 
+      isEmpty(this.registerForm.value.password) || 
+      isEmpty(this.registerForm.value.confirmPassword) || 
+      isEmpty(this.registerForm.value.document) || 
+      isEmpty(this.registerForm.value.cellphone) || 
+      isEmpty(this.registerForm.value.establishmentName)) {
+        this.toastrService.error('Preencha todos os campos')
+        return false
+    }
+
+    if (this.registerForm.value.password !== this.registerForm.value.confirmPassword) {
+      this.toastrService.error('As senhas não coincidem')
+      return false
+    }
+
+    return true
+  }
+
+  submit() {
+    console.log(this.registerForm.value)
+    if (!this.validateForm()) return
+    // implementar cadastro
+  }
+
+  navigate() {
+    this.router.navigate(['login'])
   }
 }

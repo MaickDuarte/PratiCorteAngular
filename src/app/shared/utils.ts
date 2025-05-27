@@ -9,3 +9,10 @@ export function isPassword(password: string): boolean {
     }
     return false
 }
+
+export function isEmpty(value: any): boolean {
+    if (value.length === 0 || value === null || value === undefined || value === '') {
+        return true
+    }
+    return false
+}
