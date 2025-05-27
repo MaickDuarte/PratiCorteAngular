@@ -1,0 +1,51 @@
+<app-default-login-layout
+    screenTitle="Gestão rápida e fácil da sua barbearia."
+    primaryButtonText="Criar conta"
+    secondaryButtonText="Voltar para login"
+>
+    <form [formGroup]="registerForm">
+        <app-form-input 
+            formControlName="name"
+            inputName="name"
+            label="Nome"
+            type="text"
+            placeholder="Fulano">
+        </app-form-input>
+        <app-form-input 
+            formControlName="establishmentName"
+            inputName="establishmentName"
+            label="Nome do estabelecimento"
+            type="text"
+            placeholder="Barbearia">
+        </app-form-input>
+        <app-form-input 
+            formControlName="cellphone"
+            inputName="cellphone"
+            label="Celular"
+            type="text"
+            placeholder="(11)99999-9999">
+        </app-form-input>
+        <app-form-input 
+            formControlName="email"
+            inputName="email"
+            label="Email"
+            type="email"
+            placeholder="exemplo@email.com">
+        </app-form-input>
+        <app-form-input
+            formControlName="password"
+            inputName="password"
+            label="Senha"
+            type="password"
+            placeholder="*********">
+        </app-form-input>
+        <app-form-input
+            formControlName="confirmPassword"
+            inputName="password"
+            label="Confirme a senha"
+            type="password"
+            placeholder="*********">
+        </app-form-input>
+    </form>
+
+</app-default-login-layout>
